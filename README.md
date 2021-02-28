@@ -2,7 +2,7 @@
 
 Stock comparer is a small website developed by Joseph Prichard, Ritesh Virley, Kevin Bordreaux, and Jackson Cowdrey for the HackUTD Hackathon. It uses MarketStack API to provide accurate stock stastics, while the Front-end team (Joseph and Kevin) created a UI to graph and compare up to 10 stocks at once.
 
-#Demo Images
+## Demo Images
 
 <img src="https://github.com/JosephPrichard/HackathonStocks/blob/master/images/pic1.png" width="70%" height="70%"><br>
 
