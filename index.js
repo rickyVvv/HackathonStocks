@@ -250,11 +250,11 @@ function getNavBarInfo() {
             const symbol = document.getElementById(titleId+i).innerText;
             const xhr = new XMLHttpRequest();
 
-            xhr.open('GET', 'https://api.marketstack.com/v1/eod?symbols=' + symbol + '&access_key=' + API_KEY);
+            xhr.open('GET', 'https://api.marketstack.com/v1/intraday/latest?symbols=' + symbol + '&access_key=' + API_KEY);
             xhr.onload = () => {
                 const json = JSON.parse(xhr.responseText);
                 const data = json.data;
-                const point = data[data.length - 1];
+                const point = data[0];
                 const change = (point.open - point.close).toFixed(2);
                 if(change > 0) {
                     document.getElementById(changeId+i).style.color = 'green';
