@@ -1,0 +1,463 @@
+*:focus {
+    outline: 0 !important;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.dark-grey-bg {
+    background-color: rgb(43,43,43);
+}
+
+.top {
+    z-index: -1;
+}
+
+.navbar {
+    font-size: 18px;
+    height: auto;
+    background-color: rgb(97,100,250);
+    padding: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+}
+
+.trending-stocks {
+    background-color: rgb(0,0,0);
+    color: white;
+    font-weight: lighter;
+    font-size: 13px;
+    position: fixed;
+    min-width: 100vw;
+    height: 33px;
+}
+
+.title {
+    font-weight: 400;
+    color: white;
+    margin-left: 50px;
+}
+
+.search-container {
+    text-align: center;
+}
+
+.search-bar {
+    -webkit-appearance: none;
+    border-width: 0;
+    outline: none;
+    color: rgb(80,80,80);
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    height: 30px;
+    box-shadow: 1px 1px rgb(80,80,80);
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.search-wrapper {
+    position: relative;
+    display: block;
+    width: 500px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.svg-wrapper {
+    position: absolute;
+    top: 8px;
+    left: 450px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .search-wrapper {
+        width: 250px;
+    }
+    .svg-wrapper {
+        left: 200px;
+    }
+}
+
+.search-panel {
+    margin-top: 50px;
+    padding: 20px;
+    height: auto;
+}
+
+#left {
+    border-right: rgba(255,255,255,0.3);
+    border-right-width: 1px;
+    border-right-style: solid;
+}
+
+.graph-container {
+    width: 100%;
+    float: left;
+    margin: 0;
+    height: 500px;
+}
+
+.result {
+    border-radius: 25px;
+    background: linear-gradient(rgb(123,49,249), rgb(92,44,238));
+    color: white;
+    padding: 5px 10px;
+    display: inline-block;
+    user-select: none;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.result:hover {
+    cursor: pointer;
+}
+
+.comparing-stocks {
+    width: 100%;
+    min-height: 400px;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .comparing-stocks {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+.stocks-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 0 auto 10px;
+}
+
+.stock-button {
+    outline: none;
+    border: 0;
+    text-align: center;
+    width: auto;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: linear-gradient(rgb(123,49,249), rgb(92,44,238));
+    color: white;
+    border-radius: 8px;
+    margin-left: 25px;
+}
+
+.stock-button:hover {
+    background: linear-gradient(rgb(143,69,255), rgb(112,64,255));
+}
+
+.stock-button:active {
+    background: linear-gradient(rgb(103,29,229), rgb(72,24,218));
+}
+
+.red-button {
+    background: linear-gradient(rgb(229, 45, 39) 0%, rgb(179, 18, 23)  51%);
+}
+
+.red-button:hover{
+    background: linear-gradient(rgb(249, 65, 59) 0%, rgb(199, 38, 43)  51%);
+}
+
+.red-button:active {
+    background: linear-gradient(rgb(209, 25, 19) 0%, rgb(159, 0, 3)  51%);
+}
+
+@media only screen and (max-width: 700px) {
+    #search-stock-button {
+        margin-left: 0;
+    }
+}
+
+.small-text {
+    height: 30px;
+    line-height: 0;
+    padding: 0 10px;
+    font-size: 15px;
+}
+
+.stock-button:active {
+    background-color: rgb(77,80,230);
+}
+
+.title-table {
+    font-family: "Open Sans",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+}
+
+.stocks-table {
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.table-container {
+    height: 400px;
+    width: 70%;
+    overflow-y: scroll;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 1000px) {
+    .table-container {
+        width: 90%;
+    }
+}
+
+.search-table {
+    height: 380px;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    .search-table {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .search-table {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .disable-cols {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .disable-cols-later {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .comparing-table {
+        font-size: 10px;
+    }
+}
+
+tr:nth-child(even) {
+    background-color: rgb(63,63,63)
+}
+
+td {
+    padding: 10px;
+}
+
+.lr {
+    padding-right: 15px;
+}
+
+.top-corner-x {
+    user-select: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(120,120,120);
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.top-corner-x:hover {
+    background-color: rgb(140,140,140);
+    cursor: pointer;
+}
+
+.top-corner-x:active {
+    background-color: rgb(100,100,100);
+    cursor: pointer;
+}
+
+.search-foreground {
+    position: fixed;
+    top: 15%;
+    left: 20%;
+    width: 60%;
+    height: 80%;
+    display: none;
+    background-color: rgb(53,53,53);
+    border-radius: 25px;
+    filter: drop-shadow(5px 5px 1px rgb(40,40,40));
+    z-index: 10;
+}
+
+@media only screen and (max-width: 1300px) {
+    .search-foreground {
+        width: 80%;
+        left: 10%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .search-foreground {
+        width: 90%;
+    }
+}
+
+#compare-stock-button {
+    display: block;
+    margin: 0 auto;
+}
+
+.graph-container {
+    display: block;
+    margin-top: 50px;
+    height: 470px;
+}
+
+#chart-container {
+    margin: 0 auto;
+    position: relative;
+}
+
+.error-message {
+    width: 500px;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(132,48,46);
+    border-color: rgb(154,60,57);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    font-weight: lighter;
+    display: none;
+}
+
+.success-message {
+    width: 500px;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(119,172,88);
+    border-color: rgb(128,223,39);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .error-message {
+        width: 350px;
+    }
+    .success-message {
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .error-message {
+        width: 250px;
+    }
+    .success-message {
+        width: 350px;
+    }
+}
+
+.top-stock-title {
+    display: inline-block;
+}
+
+.top-stock-midday {
+    display: inline-block;
+}
+
+.top-stock-change {
+    display: inline-block;
+}
+
+.top-stock {
+    display: inline;
+    width: 25%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 850px) {
+    .top-stock {
+        width: 33%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .top-stock {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .top-stock {
+        width: 100%;
+    }
+}
+
+.left-cover {
+    position: absolute;
+    width: 50px;
+    height: 10px;
+}
+
+.right-cover {
+    position: absolute;
+    width: 50px;
+    height: 10px;
+}
+
+/* scrollbar webkit */
+
+div::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgb(45,45,45);
+}
+
+div::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+div::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgb(45,45,45);
+}
+
+body::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+}

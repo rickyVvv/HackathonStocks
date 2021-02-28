@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <link rel='icon'
+          type='image/png'
+          href='images/stockpicker.png'>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1'/>
+    <link href='index.css' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet'
+          integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous'>
+    <title>CompareStocks</title>
+</head>
+<body id='body' class='dark-grey-bg'>
+    <div class='fixed-top top'>
+        <div class='navbar trending-stocks'>
+            <div class='top-stock top-stock-border' id='top-stock0'>
+                <div class='top-stock-title' id='top-stock-title0'>
+                    MSFT
+                </div>
+                <div class='top-stock-title'>&nbsp;&nbsp;&nbsp;</div>
+                <div class='top-stock-midday' id='top-stock-midday0'>
+                    $0
+                </div>
+                <div class='top-stock-title'>&nbsp;&nbsp;&nbsp;</div>
+                <div class='top-stock-change'  id='top-stock-change0'>
+                    $0
+                </div>
+            </div>
+
+            <div class='top-stock top-stock-border' id='top-stock1'>
+                <div class='top-stock-title' id='top-stock-title1'>
+                    AAPL
+                </div>
+                <div class='top-stock-title'>&nbsp;&nbsp;&nbsp;</div>
+                <div class='top-stock-midday'  id='top-stock-midday1'>
+                    $0
+                </div>
+                <div class='top-stock-title'>&nbsp;&nbsp;&nbsp;</div>
+                <div class='top-stock-change'  id='top-stock-change1'>
+                    $0
+                </div>
+            </div>
+
+            <div class='top-stock top-stock-border' id='top-stock2'>
+                <div class='top-stock-title' id='top-stock-title2'>
+                    AMZN
+                </div>
+                <div class='top-stock-title'>&nbsp;&nbsp;&nbsp;</div>
+                <div class='top-stock-midday'  id='top-stock-midday2'>
+                    $0
+                </div>
+                <div class='top-stock-title'>&nbsp;&nbsp;&nbsp;</div>
+                <div class='top-stock-change'  id='top-stock-change2'>
+                    $0
+                </div>
+            </div>
+
+            <div class='top-stock top-stock-border' id='top-stock3'>
+                <div class='top-stock-title' id='top-stock-title3'>
+                    GOOG
+                </div>
+                <div class='top-stock-title'>&nbsp;&nbsp;&nbsp;</div>
+                <div class='top-stock-midday'  id='top-stock-midday3'>
+                    $0
+                </div>
+                <div class='top-stock-title'>&nbsp;&nbsp;&nbsp;</div>
+                <div class='top-stock-change'  id='top-stock-change3'>
+                    $0
+                </div>
+            </div>
+        </div>
+        <div class='navbar'>
+            <div class='title'>
+                CompareStocks
+            </div>
+        </div>
+    </div>
+
+    <div id='search-foreground' class='search-foreground'>
+        <div class='search-container'>
+            <div class='search-panel' style='display: inline-block;'>
+                <div class='search-wrapper'>
+                    <input autocomplete='off' id='search' type='search' placeholder='Example: AMZN' class='search-bar'>
+                    <svg class='svg-wrapper bi bi-search' width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+                        <path fill-rule='evenodd' d='M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z' clip-rule='evenodd'/>
+                        <path fill-rule='evenodd' d='M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z' clip-rule='evenodd'/>
+                    </svg>
+                </div>
+            </div>
+            <button id='search-stock-button' class='stock-button'>
+                Search
+            </button>
+        </div>
+        <div class='table-container search-table'>
+            <table id='stocks-table' class='stocks-table title-table'>
+                <thead id='title-table' class='title-table'>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Symbol</th>
+                        <th>Name</th>
+                        <th class='disable-cols-later'>Stock Exchange</th>
+                        <th class='disable-cols'>MIC</th>
+                        <th class='disable-cols'>Country</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div id='x-out' class='top-corner-x'>
+            X
+        </div>
+        <div style='height:30px;'></div>
+        <div id='error-message' class='error-message'>Error</div>
+        <div id='success-message' class='success-message'>Success</div>
+    </div>
+
+    <div style='width: 100%; height: 180px;'></div>
+    <div class='comparing-stocks'>
+        <div style='margin-bottom: 100px;'>
+            <div class='stocks-title' style='display:inline-block'>Comparing Stocks</div>
+            <button id='add-stocks-button' class='stock-button'>
+                Add Stock
+            </button>
+        </div>
+        <div class='table-container comparing-table'>
+            <table class='stocks-table title-table'>
+                <thead id='comparison-table' class='title-table'>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Symbol</th>
+                        <th>Name</th>
+                        <th>Stock Exchange</th>
+                        <th>MIC</th>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    <div style='height: 60px'></div>
+
+    <button class='stock-button' id='compare-stock-button'>
+        Compare Selected
+    </button>
+
+    <div class='graph-container'>
+        <div id='chart-container' style='height: 470px; width: 80%;'>
+
+        </div>
+    </div>
+
+    <div style='margin-top: 470px; height: 500px'></div>
+
+    <script src='index.js'></script>
+    <script src='https://canvasjs.com/assets/script/canvasjs.min.js'></script>
+    <script src='https://canvasjs.com/assets/script/jquery-1.11.1.min.js'></script>
+    <script>
+        let data = [];
+
+        const canvas = new CanvasJS.Chart('chart-container', {
+            animationEnabled: false,
+            backgroundColor: 'rgb(43,43,43)',
+            theme: 'dark1', // 'light1', 'light2', 'dark1', 'dark2'
+            exportEnabled: true,
+            zoomEnabled: true,
+            colorSet: 'Stock',
+            axisX: {
+                interval: 1,
+                valueFormatString: 'M/D/YYYY'
+            },
+            axisY: {
+                prefix: '$',
+                title: 'Price'
+            },
+            toolTip: {
+                shared: true,
+                content: 'Date: {x}<br /><strong>{name}</strong><br />Open: {y[0]}<br />Close: {y[3]}<br />High: {y[1]}<br />Low: {y[2]}<br /><br />'
+            },
+            legend: {
+                reversed: true,
+                cursor: 'pointer',
+                itemClick: toggleDataSeries
+            },
+            data: data
+        });
+
+        function toggleDataSeries(e) {
+            e.dataSeries.compare = !!(typeof (e.dataSeries.compare) === 'undefined' || e.dataSeries.compare);
+            e.chart.render();
+        }
+
+        CanvasJS.addColorSet('Stock', [
+            '#581845',
+            '#900C3F',
+            '#FF5733',
+            '#22FFBA',
+            '#22CBFF',
+            '#2296FF',
+            '#226EFF',
+            '#3022FF',
+            '#8E22FF',
+            '#BD22FF',
+            '#F222FF',
+            '#FF3A99',
+            '#FF3A5E',
+            '#ff3a3a'
+        ]);
+
+        canvas.render();
+
+        document.getElementById('compare-stock-button').onclick = () => {
+            data.length = 0; //clears the array
+            graphData((name, json) => {
+                data.push({
+                    type: 'candlestick',
+                    risingColor: '#55FF22',
+                    fallingColor: '#C70039',
+                    showInLegend: true,
+                    name: name,
+                    yValueFormatString: '$#,##0.00',
+                    xValueFormatString: 'M/DD/YYYY',
+                    dataPoints: getDataPointsFromJson(json) //Y: [Open, High, Low, Close]
+                });
+            });
+            canvas.render();
+        }
+
+        function getDataPointsFromCSV(csv) {
+            const dataPoints = [];
+            const csvLines = csv.split(/[\r?\n|]+/);
+            for (let i = 0; i < csvLines.length; i++) {
+                if (csvLines[i].length > 0) {
+                    const points = csvLines[i].split(',');
+                    dataPoints.push({
+                        x: new Date(
+                            parseInt(points[0].split('-')[0]),
+                            parseInt(points[0].split('-')[1]) - 1,
+                            parseInt(points[0].split('-')[2])
+                        ),
+                        y: [
+                            parseFloat(points[2]),
+                            parseFloat(points[4]),
+                            parseFloat(points[5]),
+                            parseFloat(points[3])
+                        ]
+                    });
+                }
+            }
+            return dataPoints;
+        }
+
+        function getDataPointsFromJson(json) {
+            const dataPoints = [];
+            const arr = json.data;
+            for(const point of arr) {
+                const date = point.date;
+                const x = new Date(
+                    parseInt(date.split('-')[0]),
+                    parseInt(date.split('-')[1]) - 1,
+                    parseInt(date.split('-')[2])
+                );
+                const y =  [
+                    parseFloat(point.open),
+                    parseFloat(point.high),
+                    parseFloat(point.low),
+                    parseFloat(point.close)
+                ];
+                dataPoints.push({
+                    x: x, y: y
+                });
+            }
+            return dataPoints;
+        }
+    </script>
+</body>
+</html>
