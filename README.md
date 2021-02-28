@@ -4,12 +4,13 @@ Stock comparer is a small website developed by Joseph Prichard, Ritesh Virley, K
 
 ## Demo Images
 
+<img src="https://github.com/JosephPrichard/HackathonStocks/blob/master/images/pic4.png" width="70%" height="70%"><br>
+
+<img src="https://github.com/JosephPrichard/HackathonStocks/blob/master/images/pic5.png" width="70%" height="70%"><br>
+
 <img src="https://github.com/JosephPrichard/HackathonStocks/blob/master/images/pic1.png" width="70%" height="70%"><br>
 
 <img src="https://github.com/JosephPrichard/HackathonStocks/blob/master/images/pic2.png" width="70%" height="70%"><br>
 
 <img src="https://github.com/JosephPrichard/HackathonStocks/blob/master/images/pic3.png" width="70%" height="70%"><br>
 
-<img src="https://github.com/JosephPrichard/HackathonStocks/blob/master/images/pic4.png" width="70%" height="70%"><br>
-
-<img src="https://github.com/JosephPrichard/HackathonStocks/blob/master/images/pic5.png" width="70%" height="70%"><br>
